@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UITest 
 {
@@ -39,8 +39,11 @@ public class UITest
 	@Test
 	public void startBrowser()
 	{
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver=new ChromeDriver();
+		
+		//WebDriverManager.chromedriver().setup();
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		Assert.assertTrue(driver.getTitle().contains("Orange"), "Title does not match");
