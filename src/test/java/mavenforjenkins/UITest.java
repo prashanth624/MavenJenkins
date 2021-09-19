@@ -42,12 +42,15 @@ public class UITest
 		
 		//WebDriverManager.chromedriver().setup();
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\chromedriver_win32\\chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
-		Assert.assertTrue(driver.getTitle().contains("Orange"), "Title does not match");
-		driver.quit();
+		//Assert.assertTrue(driver.getTitle().contains("Orange"), "Title does not match");
+		driver.quit();*/
+		
+		System.out.println("hello");
+		
 	}
 	
 	
