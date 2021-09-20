@@ -3,6 +3,7 @@ package mavenforjenkins;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -29,7 +30,7 @@ public class UITest
 		{
 			//WebDriverManager.edgedriver().setup();
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\SeleniumGecko\\geckodriver.exe");
-			driver=new EdgeDriver();
+			driver=new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
