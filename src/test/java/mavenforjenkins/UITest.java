@@ -28,7 +28,7 @@ public class UITest
 		else if(browserName.equalsIgnoreCase("firefox"))
 		{
 			//WebDriverManager.edgedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\SeleniumGecko\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\SeleniumGecko\\geckodriver.exe");
 			driver=new EdgeDriver();
 		}
 		driver.manage().window().maximize();
