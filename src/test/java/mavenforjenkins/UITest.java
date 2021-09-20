@@ -12,46 +12,48 @@ import org.testng.annotations.Test;
 public class UITest 
 {
 
-	//@Parameters("Browser")
-	//@Test
-	/*public void startBrowser(String browserName)
+	@Parameters("Browser")
+	@Test
+	public void startBrowser(String browserName)
 	{
 		System.out.println("Parameter value is "+browserName);
 		WebDriver driver=null;
 		
-		if(browserName.contains("Chrome"))
+		if(browserName.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
-			 driver=new ChromeDriver();
+			//WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\chromedriver_win32\\chromedriver.exe"); 
+			driver=new ChromeDriver();
 		}
-		else if(browserName.contains("Edge"))
+		else if(browserName.equalsIgnoreCase("firefox"))
 		{
-			WebDriverManager.edgedriver().setup();
-			 driver=new EdgeDriver();
+			//WebDriverManager.edgedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\SeleniumGecko\\geckodriver.exe");
+			driver=new EdgeDriver();
 		}
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		Assert.assertTrue(driver.getTitle().contains("Orange"), "Title does not match");
 		driver.quit();
-	}*/
+	}
 	
 	
-	@Test
+	/*@Test
 	public void startBrowser()
 	{
 		
 		//WebDriverManager.chromedriver().setup();
 		
-		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\prashanth_a1\\eclipse_workspace_old\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		//Assert.assertTrue(driver.getTitle().contains("Orange"), "Title does not match");
-		driver.quit();*/
+		driver.quit();
 		
 		System.out.println("hello");
 		
-	}
+	}*/
 	
 	
 	
